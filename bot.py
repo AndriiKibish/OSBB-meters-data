@@ -9,6 +9,9 @@ from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Command
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove
+import os
+
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 
 # Определение состояний диалога
 class Form(StatesGroup):
@@ -16,7 +19,7 @@ class Form(StatesGroup):
     COLUMN_DATA = State()
 
 # Создание бота и диспетчера
-bot = Bot(token='6267123536:AAFzYfaaRvyNDB_mjkmgxELopJEj0It5Cu4')
+bot = Bot(token=TELEGRAM_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
