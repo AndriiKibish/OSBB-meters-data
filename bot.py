@@ -88,9 +88,9 @@ def run_app():
 
 
 if __name__ == '__main__':
-    # Запуск асинхронного цикла с Flask
-    loop = asyncio.get_event_loop()
-    loop.create_task(on_start())
-    run_app()
+    # Запуск асинхронного цикла с Flask с использованием asyncio.run()
+    asyncio.run(on_start())  # Запуск Telegram бота
+    run_app()  # Запуск Flask
+
 
 
