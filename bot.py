@@ -13,7 +13,7 @@ from aiogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove
 from flask import Flask
 from aiogram.utils.executor import start_webhook
 
-TELEGRAM_TOKEN = os.getenv(TELEGRAM_TOKEN)
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 
 # Определение состояний диалога
